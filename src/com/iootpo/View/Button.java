@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 
 public class Button extends JButton {
+
     public Button(String text, ActionListener action) {
         setText(text);
         addActionListener(action);
