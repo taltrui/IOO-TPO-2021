@@ -21,7 +21,7 @@ public class Main {
 
         UserDAO uDao = new UserDAO();
 
-\        List<User> results = new UserDAO().getAll();
+        List<User> results = new UserDAO().getAll();
         for (User p : results) {
             System.out.println(p.getUserName());
         }
