@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class DBHandler {
     private static DBHandler dbConnection;
     private static EntityManager em = null;
-    private final EntityManagerFactory emf;
+    private static EntityManagerFactory emf = null;
 
     private DBHandler() {
         emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
@@ -33,5 +33,10 @@ public class DBHandler {
         em.getTransaction().begin();
         em.persist(object);
         em.getTransaction().commit();
+    }
+
+    public static void close() {
+        em.close();
+        emf.close();
     }
 }

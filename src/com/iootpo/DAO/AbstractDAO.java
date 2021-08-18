@@ -1,6 +1,5 @@
 package com.iootpo.DAO;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 public interface AbstractDAO<T> {

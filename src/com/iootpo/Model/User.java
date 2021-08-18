@@ -7,9 +7,7 @@ import java.util.Date;
 
 @Entity
 public class User {
-    @Id @GeneratedValue
-    private long id;
-
+    @Id
     String userName;
     int dni;
     String firstName;
@@ -31,10 +29,6 @@ public class User {
     }
 
     public User() {
-    }
-
-    public long getId() {
-        return id;
     }
 
     public Boolean getAdmin() {

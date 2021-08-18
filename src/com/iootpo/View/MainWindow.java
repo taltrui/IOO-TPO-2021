@@ -22,5 +22,5 @@ public class MainWindow extends JFrame {
         setLayout(null);
         setVisible(true);
     }
-};
+}
 
