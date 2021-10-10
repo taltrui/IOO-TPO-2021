@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.12" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {space ::160:x, par l {comp button1:::p::p, comp label2:::p::p, comp label1::l:p::p, comp textField1::l:p:200:p, seq l {comp passwordField1:::p:200:p, space s:::p, comp checkBox1:::p::p}}, space :p:152:p}}"
+					"$verticalGroup": "par l {seq t {space ::39:x, comp label1:::p::p, space :::p, comp textField1:::p::p, space :p:25:p, comp label2:::p::p, space :::p, par b {comp passwordField1::b:p::p, comp checkBox1::b:p::p}, space s:::p, comp button1:::p::p, space :p:36:p}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Usuario"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Contraseña"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordField1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox1"
+						"text": "Mostrar contraseña"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "Iniciar sesión"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 15 )
+			"size": new java.awt.Dimension( 700, 300 )
+		} )
+	}
+}

@@ -1,13 +1,14 @@
 package com.iootpo.DAO;
 
 import com.iootpo.Model.Admin;
+import com.iootpo.Utils.DBHandlerSingleton;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class AdminDAO implements AbstractDAO<Admin> {
-    private final EntityManager em = DBHandler.getConnection().getEm();
+    private final EntityManager em = DBHandlerSingleton.getConnection().getEm();
 
     @Override
     public Admin get(String id) {
@@ -26,7 +27,7 @@ public class AdminDAO implements AbstractDAO<Admin> {
 
     @Override
     public void create(Admin object) {
-        DBHandler.persist(object);
+        DBHandlerSingleton.persist(object);
     }
 
     @Override

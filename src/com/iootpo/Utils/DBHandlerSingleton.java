@@ -1,22 +1,22 @@
-package com.iootpo.DAO;
+package com.iootpo.Utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class DBHandler {
-    private static DBHandler dbConnection;
+public class DBHandlerSingleton {
+    private static DBHandlerSingleton dbConnection;
     private static EntityManager em = null;
     private static EntityManagerFactory emf = null;
 
-    private DBHandler() {
+    private DBHandlerSingleton() {
         emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
         em = emf.createEntityManager();
     }
 
-    public static DBHandler getConnection() {
+    public static DBHandlerSingleton getConnection() {
         if (dbConnection == null) {
-            dbConnection = new DBHandler();
+            dbConnection = new DBHandlerSingleton();
         }
         return dbConnection;
     }

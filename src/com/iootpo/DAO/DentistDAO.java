@@ -1,13 +1,14 @@
 package com.iootpo.DAO;
 
 import com.iootpo.Model.Dentist;
+import com.iootpo.Utils.DBHandlerSingleton;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class DentistDAO implements AbstractDAO<Dentist> {
-    private final EntityManager em = DBHandler.getConnection().getEm();
+    private final EntityManager em = DBHandlerSingleton.getConnection().getEm();
 
     @Override
     public Dentist get(String id) {
@@ -26,7 +27,7 @@ public class DentistDAO implements AbstractDAO<Dentist> {
 
     @Override
     public void create(Dentist object) {
-        DBHandler.persist(object);
+        DBHandlerSingleton.persist(object);
     }
 
     @Override
