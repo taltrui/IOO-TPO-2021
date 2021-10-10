@@ -9,7 +9,7 @@ public class Login extends JFrame {
     private void logUser(String user, char[] password) {
         if(user.isBlank() || password.length == 0) return;
 
-        MainWindow.getWindow().setVisible(true);
+        AdminMainScreen.getWindow().setVisible(true);
         frame.setVisible(false);
     }
 
@@ -29,15 +29,20 @@ public class Login extends JFrame {
         GroupLayout layout = new GroupLayout(this.getContentPane());
         setLayout(layout);
 
-        layout.setAutoCreateGaps(true);
-        layout.setAutoCreateContainerGaps(true);
-
         userLabel.setText("Usuario");
 
         passwordLabel.setText("Contraseña");
 
         showPasswordCheck.setText("Mostrar contraseña");
-
+        showPasswordCheck.addActionListener(e -> {
+            showPasswordCheck.addItemListener(l -> {
+                if (l.getStateChange() == 1) {
+                    passwordField.setEchoChar((char) 0);
+                } else {
+                    passwordField.setEchoChar('•');
+                }
+            });
+        });
         loginButton.setText("Iniciar sesión");
         loginButton.addActionListener(e -> {
             String user = userField.getText();

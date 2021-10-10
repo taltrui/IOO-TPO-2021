@@ -1,0 +1,33 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space ::266:x, par t {comp button3:::p:180:p, comp button2:::p:180:p, comp button1:::p:180:p}, space :p:252:p}, seq l {space :::p, comp button4:::p::p, space ::614:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp button4:::p::p, space :p:21:p, comp button1:::p:44:p, space s:::p, comp button2:::p:44:p, space s:::p, comp button3:::p:44:p, space ::48:x}}"
+		} ) {
+			name: "this"
+			"title": "Administrar pacientes"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Registrar paciente"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Modificar paciente"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "Eliminar paciente"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button4"
+				"text": "Volver"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 700, 305 )
+		} )
+	}
+}
