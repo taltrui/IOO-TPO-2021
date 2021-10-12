@@ -34,15 +34,13 @@ public class Login extends JFrame {
         passwordLabel.setText("Contraseña");
 
         showPasswordCheck.setText("Mostrar contraseña");
-        showPasswordCheck.addActionListener(e -> {
-            showPasswordCheck.addItemListener(l -> {
+        showPasswordCheck.addItemListener(l -> {
                 if (l.getStateChange() == 1) {
                     passwordField.setEchoChar((char) 0);
                 } else {
                     passwordField.setEchoChar('•');
                 }
             });
-        });
         loginButton.setText("Iniciar sesión");
         loginButton.addActionListener(e -> {
             String user = userField.getText();

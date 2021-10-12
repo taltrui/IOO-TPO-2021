@@ -1,10 +1,10 @@
 package com.iootpo.View.Screens;
 
-public class RegisterPatient extends PatientData {
+public class RegisterDentist extends DentistData {
 
-    public RegisterPatient() {
+    public RegisterDentist() {
         super();
-        setTitle("Registrar paciente");
+        setTitle("Registrar odontólogo");
         okButton.setText("Registrar");
     }
 

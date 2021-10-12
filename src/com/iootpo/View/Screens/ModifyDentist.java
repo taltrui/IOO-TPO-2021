@@ -1,15 +1,16 @@
 package com.iootpo.View.Screens;
 
-public class ModifyPatient extends PatientData {
+public class ModifyDentist extends DentistData {
 
-    public ModifyPatient() {
+    public ModifyDentist() {
         super();
         setTitle("Modificar paciente");
         okButton.setText("Modificar");
-        userCombo.setVisible(true);
+        dentistCombo.setVisible(true);
     }
+
     @Override
     void onSubmit() {
-        System.out.println("MODIFIED");
+        System.out.println("REGISTERED");
     }
 }

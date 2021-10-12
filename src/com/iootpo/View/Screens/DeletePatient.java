@@ -18,9 +18,12 @@ public class DeletePatient extends JFrame {
 
         comboLabel.setText("Seleccione el paciente a eliminar:");
 
-        cancelButton.setText("Cancel");
+        cancelButton.setText("Cancelar");
+        cancelButton.addActionListener(e -> {
+            setVisible(false);
+        });
 
-        okButton.setText("OK");
+        okButton.setText("Eliminar");
 
         layout.setHorizontalGroup(
             layout.createParallelGroup()
@@ -28,14 +31,14 @@ public class DeletePatient extends JFrame {
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup()
                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(0, 211, Short.MAX_VALUE)
-                            .addComponent(okButton, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addComponent(okButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-                            .addGap(4, 4, 4))
+                            .addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                            .addGap(10))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(comboLabel, GroupLayout.PREFERRED_SIZE, 295, GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 87, Short.MAX_VALUE))
+                            .addGap(65))
                         .addComponent(patientToDeleteCombo, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(

@@ -11,7 +11,6 @@ public class PatientAdmin extends JFrame {
         modifyPatientButton = new JButton();
         deletePatientButton = new JButton();
         backButton = new JButton();
-        deletePatientDialog = new DeletePatient();
 
         setTitle("Administrar pacientes");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -20,13 +19,11 @@ public class PatientAdmin extends JFrame {
         setLayout(layout);
 
         registerPatientButton.setText("Registrar paciente");
-
+        registerPatientButton.addActionListener(e -> new RegisterPatient().setVisible(true));
         modifyPatientButton.setText("Modificar paciente");
-
+        modifyPatientButton.addActionListener(e -> new ModifyPatient().setVisible(true));
         deletePatientButton.setText("Eliminar paciente");
-        deletePatientButton.addActionListener(e -> {
-            deletePatientDialog.setVisible(true);
-        });
+        deletePatientButton.addActionListener(e -> new DeletePatient().setVisible(true));
 
         backButton.setText("Volver");
         backButton.addActionListener(e -> {
@@ -76,5 +73,4 @@ public class PatientAdmin extends JFrame {
     private JButton modifyPatientButton;
     private JButton deletePatientButton;
     private JButton backButton;
-    private DeletePatient deletePatientDialog;
 }
