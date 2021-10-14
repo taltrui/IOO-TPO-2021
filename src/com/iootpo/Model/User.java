@@ -8,30 +8,26 @@ import java.util.Date;
 @Entity
 public class User {
     @Id
-    @GeneratedValue
-    String id;
+    String dni;
     String userName;
-    int dni;
     String firstName;
     String lastName;
     String address;
-    Date creationDate;
     String password;
 
-    public User(String userName, int dni, String firstName, String lastName, String address, Date creationDate, String password) {
+    public User(String userName, String dni, String firstName, String lastName, String address, String password) {
         this.userName = userName;
         this.dni = dni;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
-        this.creationDate = creationDate;
         this.password = password;
     }
 
     public User() {
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
@@ -51,10 +47,6 @@ public class User {
         this.address = address;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -65,5 +57,12 @@ public class User {
 
     public String getUserName() {
         return userName;
+    }
+
+    public String toString() {
+        if (firstName == null) {
+            return "";
+        }
+        return String.format("%s %s - %s", firstName, lastName, dni);
     }
 }

@@ -1,5 +1,9 @@
 package com.iootpo.View.Screens;
 
+import com.iootpo.DAO.UserDAO;
+
+import javax.swing.*;
+
 public class RegisterPatient extends PatientData {
 
     public RegisterPatient() {
@@ -10,6 +14,13 @@ public class RegisterPatient extends PatientData {
 
     @Override
     void onSubmit() {
-        System.out.println("REGISTERED");
+        if(!validInputs()) return;
+
+        UserDAO userDAO = new UserDAO();
+
+        userDAO.create(createUser());
+
+        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "Usuario registrado!");
     }
 }

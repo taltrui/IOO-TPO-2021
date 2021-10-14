@@ -1,13 +1,46 @@
 package com.iootpo.View.Screens;
 
+import com.iootpo.Model.User;
+
 import java.awt.*;
+import java.util.Arrays;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 
 public class PatientData extends JFrame {
 
+    class Field {
+        JTextField input;
+        JLabel caption;
+
+        public Field(JTextField input, JLabel caption) {
+            this.input = input;
+            this.caption = caption;
+        }
+    }
+
     void onSubmit() {
+    }
+
+    boolean validInputs() {
+        final boolean[] valid = {true};
+
+        fields.forEach(field -> {
+            field.caption.setVisible(field.input.getText().isBlank());
+            if (valid[0]) {
+                valid[0] = !field.input.getText().isBlank();
+            }
+        });
+
+        return valid[0];
+    }
+
+    User createUser() {
+        User newUser = new User(userField.getText(), dniField.getText(), nameField.getText(), lastnameField.getText(), addressField.getText(), passwordField.getText());
+
+        return newUser;
     }
 
     public PatientData() {
@@ -32,6 +65,11 @@ public class PatientData extends JFrame {
         okButton = new JButton();
         cancelButton = new JButton();
         userCombo = new JComboBox();
+
+        fields = Arrays.stream(new Field[]{new Field(nameField, nameFieldCaption),
+                new Field(lastnameField, lastnameFieldCaption), new Field(dniField, dniFieldCaption),
+                new Field(userField, userFieldCaption), new Field(passwordField, passwordFieldCaption),
+                new Field(addressField, addressFieldCaption)}).toList();
 
         setTitle("Datos de paciente");
         GroupLayout layout = new GroupLayout(this.getContentPane());
@@ -179,25 +217,26 @@ public class PatientData extends JFrame {
     }
 
     private JLabel nameLabel;
-    private JTextField nameField;
+    JTextField nameField;
     private JLabel nameFieldCaption;
     private JLabel dniFieldCaption;
-    private JTextField dniField;
+    JTextField dniField;
     private JLabel dniLabel;
     private JLabel lastnameFieldCaption;
-    private JTextField lastnameField;
+    JTextField lastnameField;
     private JLabel lastnameLabel;
     private JLabel addressFieldCaption;
-    private JTextField addressField;
+    JTextField addressField;
     private JLabel addressLabel;
     private JLabel userFieldCaption;
-    private JTextField userField;
+    JTextField userField;
     private JLabel userLabel;
     private JLabel passwordFieldCaption;
-    private JTextField passwordField;
+    JTextField passwordField;
     private JLabel passwordLabel;
     JButton okButton;
     private JButton cancelButton;
     JComboBox userCombo;
+    List<Field> fields;
 
 }

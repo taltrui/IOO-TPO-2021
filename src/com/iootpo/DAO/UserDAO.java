@@ -13,7 +13,7 @@ public class UserDAO implements AbstractDAO<User> {
     @Override
     public User get(String id) {
         TypedQuery<User> query =
-                em.createQuery("SELECT user FROM User user WHERE user.id like :id", User.class).setParameter("id", id);
+                em.createQuery("SELECT user FROM User user WHERE user.dni like :id", User.class).setParameter("id", id);
         return query.getSingleResult();
     }
 
@@ -37,7 +37,7 @@ public class UserDAO implements AbstractDAO<User> {
 
     @Override
     public void delete(User object) {
-        em.remove(object);
+        DBHandlerSingleton.delete(object);
     }
 
 }

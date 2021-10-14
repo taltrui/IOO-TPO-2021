@@ -1,10 +1,23 @@
 package com.iootpo.View.Screens;
 
+import com.iootpo.DAO.UserDAO;
+import com.iootpo.Model.User;
+
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
+import java.util.List;
 
 public class DeletePatient extends JFrame {
+    User selectedUser;
+    UserDAO userDAO = new UserDAO();
+
+    void onSubmit() {
+        userDAO.delete(selectedUser);
+        this.setVisible(false);
+
+        JOptionPane.showMessageDialog(null, "Usuario eliminado!");
+    }
 
     public DeletePatient() {
         patientToDeleteCombo = new JComboBox();
@@ -16,6 +29,13 @@ public class DeletePatient extends JFrame {
         GroupLayout layout = new GroupLayout(this.getContentPane());
         setLayout(layout);
 
+        List<User> users = userDAO.getAll();
+
+        users.forEach(user -> patientToDeleteCombo.addItem(user));
+
+        patientToDeleteCombo.addActionListener(e -> {
+            selectedUser = ((User)patientToDeleteCombo.getSelectedItem());
+        });
         comboLabel.setText("Seleccione el paciente a eliminar:");
 
         cancelButton.setText("Cancelar");
@@ -24,6 +44,9 @@ public class DeletePatient extends JFrame {
         });
 
         okButton.setText("Eliminar");
+        okButton.addActionListener(e -> {
+            onSubmit();
+        });
 
         layout.setHorizontalGroup(
             layout.createParallelGroup()

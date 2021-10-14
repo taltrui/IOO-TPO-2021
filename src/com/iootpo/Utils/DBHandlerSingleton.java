@@ -2,6 +2,7 @@ package com.iootpo.Utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class DBHandlerSingleton {
@@ -30,9 +31,17 @@ public class DBHandlerSingleton {
     }
 
     public static void persist(Object object) {
-        em.getTransaction().begin();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
         em.persist(object);
-        em.getTransaction().commit();
+        tx.commit();
+    }
+
+    public static void delete(Object object) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.remove(object);
+        tx.commit();
     }
 
     public static void close() {
