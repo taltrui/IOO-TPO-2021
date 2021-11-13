@@ -13,6 +13,10 @@ public class DeletePatient extends JFrame {
     UserDAO userDAO = new UserDAO();
 
     void onSubmit() {
+        if (selectedUser.getUserName() == null) {
+            return;
+        }
+
         userDAO.delete(selectedUser);
         this.setVisible(false);
 
@@ -31,6 +35,7 @@ public class DeletePatient extends JFrame {
 
         List<User> users = userDAO.getAll();
 
+        patientToDeleteCombo.addItem(new User());
         users.forEach(user -> patientToDeleteCombo.addItem(user));
 
         patientToDeleteCombo.addActionListener(e -> {

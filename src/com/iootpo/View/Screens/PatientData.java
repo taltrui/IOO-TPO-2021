@@ -1,6 +1,7 @@
 package com.iootpo.View.Screens;
 
 import com.iootpo.Model.User;
+import com.iootpo.View.Components.Field;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -10,17 +11,6 @@ import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 
 public class PatientData extends JFrame {
-
-    class Field {
-        JTextField input;
-        JLabel caption;
-
-        public Field(JTextField input, JLabel caption) {
-            this.input = input;
-            this.caption = caption;
-        }
-    }
-
     void onSubmit() {
     }
 

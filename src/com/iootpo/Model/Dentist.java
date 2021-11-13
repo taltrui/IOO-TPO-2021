@@ -1,12 +1,24 @@
 package com.iootpo.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Dentist extends User{
-    int registration;
+    @Id
+    String registration;
 
-    public int getRegistration() {
+    public Dentist() {
+
+    }
+
+    public Dentist(String name, String lastName, String registration) {
+        this.firstName = name;
+        this.lastName = lastName;
+        this.registration = registration;
+    }
+
+    public String getRegistration() {
         return registration;
     }
 }

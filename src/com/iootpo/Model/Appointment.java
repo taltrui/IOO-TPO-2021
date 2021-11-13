@@ -4,11 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.Random;
 
 @Entity
 public class Appointment {
     @Id
-    @GeneratedValue
     String id;
     String patientId;
     String dentistId;
@@ -18,6 +18,7 @@ public class Appointment {
         this.patientId = patientId;
         this.dentistId = dentistId;
         this.date = date;
+        this.id = Math.random()+"";
     }
 
     public Appointment(Date date) {
