@@ -1,6 +1,6 @@
 package com.iootpo.View.Screens;
 
-import com.iootpo.Model.User;
+import com.iootpo.Model.Patient;
 import com.iootpo.View.Components.Field;
 
 import java.awt.*;
@@ -27,10 +27,10 @@ public class PatientData extends JFrame {
         return valid[0];
     }
 
-    User createUser() {
-        User newUser = new User(userField.getText(), dniField.getText(), nameField.getText(), lastnameField.getText(), addressField.getText(), passwordField.getText());
+    Patient createUser() {
+        Patient newPatient = new Patient(userField.getText(), dniField.getText(), nameField.getText(), lastnameField.getText(), addressField.getText(), passwordField.getText());
 
-        return newUser;
+        return newPatient;
     }
 
     public PatientData() {

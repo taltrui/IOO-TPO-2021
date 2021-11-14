@@ -1,26 +1,29 @@
 package com.iootpo.View.Screens;
 
-import com.iootpo.DAO.UserDAO;
-import com.iootpo.Model.User;
+import com.iootpo.Controllers.PatientController;
+import com.iootpo.Model.Patient;
 
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
-import java.util.List;
 
 public class DeletePatient extends JFrame {
-    User selectedUser;
-    UserDAO userDAO = new UserDAO();
+    Patient selectedPatient;
+    PatientController patientController = new PatientController();
 
     void onSubmit() {
-        if (selectedUser.getUserName() == null) {
+        if (selectedPatient.getUserName() == null) {
             return;
         }
 
-        userDAO.delete(selectedUser);
-        this.setVisible(false);
+        try {
+            patientController.delete(selectedPatient);
+            JOptionPane.showMessageDialog(null, "Usuario eliminado!");
+            this.setVisible(false);
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, "Hubo un error al eliminar al paciente");
+        }
 
-        JOptionPane.showMessageDialog(null, "Usuario eliminado!");
     }
 
     public DeletePatient() {
@@ -33,13 +36,10 @@ public class DeletePatient extends JFrame {
         GroupLayout layout = new GroupLayout(this.getContentPane());
         setLayout(layout);
 
-        List<User> users = userDAO.getAll();
-
-        patientToDeleteCombo.addItem(new User());
-        users.forEach(user -> patientToDeleteCombo.addItem(user));
+        patientController.populateCombo(patientToDeleteCombo);
 
         patientToDeleteCombo.addActionListener(e -> {
-            selectedUser = ((User)patientToDeleteCombo.getSelectedItem());
+            selectedPatient = ((Patient) patientToDeleteCombo.getSelectedItem());
         });
         comboLabel.setText("Seleccione el paciente a eliminar:");
 
@@ -54,33 +54,33 @@ public class DeletePatient extends JFrame {
         });
 
         layout.setHorizontalGroup(
-            layout.createParallelGroup()
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup()
-                        .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(0, 0, Short.MAX_VALUE)
-                            .addComponent(okButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-                            .addGap(10))
+                layout.createParallelGroup()
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(comboLabel, GroupLayout.PREFERRED_SIZE, 295, GroupLayout.PREFERRED_SIZE)
-                            .addGap(65))
-                        .addComponent(patientToDeleteCombo, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(okButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                                                .addGap(10))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(comboLabel, GroupLayout.PREFERRED_SIZE, 295, GroupLayout.PREFERRED_SIZE)
+                                                .addGap(65))
+                                        .addComponent(patientToDeleteCombo, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup()
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(23, 23, 23)
-                    .addComponent(comboLabel, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(patientToDeleteCombo, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(cancelButton)
-                        .addComponent(okButton))
-                    .addContainerGap())
+                layout.createParallelGroup()
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(comboLabel, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(patientToDeleteCombo, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(cancelButton)
+                                        .addComponent(okButton))
+                                .addContainerGap())
         );
         pack();
         setLocationRelativeTo(getOwner());

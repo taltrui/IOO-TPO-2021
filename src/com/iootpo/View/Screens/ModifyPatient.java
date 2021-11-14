@@ -1,12 +1,12 @@
 package com.iootpo.View.Screens;
 
-import com.iootpo.DAO.UserDAO;
-import com.iootpo.Model.User;
+import com.iootpo.Controllers.PatientController;
+import com.iootpo.Model.Patient;
 
 import javax.swing.*;
-import java.util.List;
 
 public class ModifyPatient extends PatientData {
+    PatientController patientController = new PatientController();
 
     public ModifyPatient() {
         super();
@@ -14,41 +14,36 @@ public class ModifyPatient extends PatientData {
         okButton.setText("Modificar");
         userCombo.setVisible(true);
 
-        UserDAO userDAO = new UserDAO();
-
-        List<User> users = userDAO.getAll();
-
-        userCombo.addItem(new User());
-        users.forEach(user -> userCombo.addItem(user));
+        patientController.populateCombo(userCombo);
 
         userCombo.addActionListener(e -> {
-            populateData((User)userCombo.getSelectedItem());
+            populateData((Patient)userCombo.getSelectedItem());
         });
     }
 
-    void populateData(User selectedUser) {
-        nameField.setText(selectedUser.getFirstName());
+    void populateData(Patient selectedPatient) {
+        nameField.setText(selectedPatient.getFirstName());
         nameField.setEditable(false);
-        lastnameField.setText(selectedUser.getLastName());
+        lastnameField.setText(selectedPatient.getLastName());
         lastnameField.setEditable(false);
-        dniField.setText(selectedUser.getDni());
+        dniField.setText(selectedPatient.getDni());
         dniField.setEditable(false);
-        addressField.setText(selectedUser.getAddress());
-        userField.setText(selectedUser.getUserName());
+        addressField.setText(selectedPatient.getAddress());
+        userField.setText(selectedPatient.getUserName());
         userField.setEditable(false);
-        passwordField.setText(selectedUser.getPassword());
+        passwordField.setText(selectedPatient.getPassword());
     }
 
     @Override
     void onSubmit() {
         if(!validInputs()) return;
 
-        UserDAO userDAO = new UserDAO();
-
-        userDAO.update(createUser());
-
-        this.setVisible(false);
-        JOptionPane.showMessageDialog(null, "Usuario modificado!");
-
+        try {
+            patientController.update(createUser());
+            JOptionPane.showMessageDialog(null, "Paciente modificado!");
+            this.setVisible(false);
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, "Hubo un error al modificar al paciente");
+        }
     }
 }

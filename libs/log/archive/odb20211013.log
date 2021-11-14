@@ -18,7 +18,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 200
 Configuration path: ?
 
 [2021-10-13 21:39:03 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 376
 Configuration path: ?
 
 [2021-10-13 21:40:18 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -43,7 +43,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 187
 Configuration path: ?
 
 [2021-10-13 21:40:51 #3 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 181
 Configuration path: ?
 
 [2021-10-13 21:43:06 #3 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -68,7 +68,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 866
 Configuration path: ?
 
 [2021-10-13 21:44:58 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -82,7 +82,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 593
 Configuration path: ?
 
 [2021-10-13 21:48:03 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 203
 Configuration path: ?
 
 [2021-10-13 21:51:59 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +110,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 213
 Configuration path: ?
 
 [2021-10-13 22:20:17 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 134
 Configuration path: ?
 
 [2021-10-13 22:20:52 #4 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -135,5 +135,5 @@ Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 202
 Configuration path: ?
 
 [2021-10-13 22:47:18 #3 type] 
-Type com.iootpo.Model.User is not enhanced.
+Type com.iootpo.Model.Patient is not enhanced.
 

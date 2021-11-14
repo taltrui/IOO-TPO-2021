@@ -13,14 +13,14 @@ public class AdminDAO implements AbstractDAO<Admin> {
     @Override
     public Admin get(String id) {
         TypedQuery<Admin> query =
-                em.createQuery("SELECT admin FROM User admin WHERE admin.id like :id", Admin.class).setParameter("id", id);
+                em.createQuery("SELECT admin FROM Admin admin WHERE admin.userName like :id", Admin.class).setParameter("id", id);
         return query.getSingleResult();
     }
 
     @Override
     public List<Admin> getAll() {
         TypedQuery<Admin> query =
-                em.createQuery("SELECT admin FROM User admin", Admin.class);
+                em.createQuery("SELECT admin FROM Admin admin", Admin.class);
         return query.getResultList();
 
     }

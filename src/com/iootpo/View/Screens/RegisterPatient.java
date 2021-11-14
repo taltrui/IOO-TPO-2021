@@ -1,6 +1,7 @@
 package com.iootpo.View.Screens;
 
-import com.iootpo.DAO.UserDAO;
+import com.iootpo.Controllers.PatientController;
+import com.iootpo.Model.Patient;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.RollbackException;
@@ -18,15 +19,16 @@ public class RegisterPatient extends PatientData {
     void onSubmit() {
         if(!validInputs()) return;
 
-        UserDAO userDAO = new UserDAO();
+        PatientController patientController = new PatientController();
+
+        Patient newPatient = createUser();
 
         try {
-            userDAO.create(createUser());
+            patientController.create(newPatient);
         } catch (RollbackException exception) {
             Throwable cause = exception.getCause();
-            System.out.println(cause.getClass());
             if (cause.getClass() == EntityExistsException.class) {
-                JOptionPane.showMessageDialog(null, "Ya existe el usuario.");
+                JOptionPane.showMessageDialog(null, "Ya existe el usuario: " + newPatient.getUserName());
             } else {
                 JOptionPane.showMessageDialog(null, "Hubo un error al crear el usuario usuario.");
             }
@@ -34,6 +36,6 @@ public class RegisterPatient extends PatientData {
         }
 
         this.setVisible(false);
-        JOptionPane.showMessageDialog(null, "Usuario registrado!");
+        JOptionPane.showMessageDialog(null, "¡Usuario registrado!");
     }
 }

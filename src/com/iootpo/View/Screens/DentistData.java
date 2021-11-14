@@ -60,14 +60,17 @@ public class DentistData extends JFrame {
 
         nameFieldCaption.setText("Campo requerido");
         nameFieldCaption.setForeground(new Color(255, 0, 51));
+        nameFieldCaption.setVisible(false);
 
         lastnameFieldCaption.setText("Campo requerido");
         lastnameFieldCaption.setForeground(new Color(255, 0, 51));
+        lastnameFieldCaption.setVisible(false);
 
         lastnameLabel.setText("Apellido");
 
         registrationFieldCaption.setText("Campo requerido");
         registrationFieldCaption.setForeground(new Color(255, 0, 51));
+        registrationFieldCaption.setVisible(false);
 
         registrationLabel.setText("Matricula");
 
@@ -144,13 +147,13 @@ public class DentistData extends JFrame {
     }
 
     private JLabel nameLabel;
-    private JTextField nameField;
+    public JTextField nameField;
     private JLabel nameFieldCaption;
     private JLabel lastnameFieldCaption;
-    private JTextField lastnameField;
+    public JTextField lastnameField;
     private JLabel lastnameLabel;
     private JLabel registrationFieldCaption;
-    private JTextField registrationField;
+    public JTextField registrationField;
     private JLabel registrationLabel;
     JButton okButton;
     private JButton cancelButton;

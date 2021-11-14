@@ -4,6 +4,7 @@ import com.iootpo.Model.Dentist;
 import com.iootpo.Utils.DBHandlerSingleton;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -12,9 +13,7 @@ public class DentistDAO implements AbstractDAO<Dentist> {
 
     @Override
     public Dentist get(String id) {
-        TypedQuery<Dentist> query =
-                em.createQuery("SELECT dentist FROM Dentist dentist WHERE dentist.id like :id", Dentist.class).setParameter("id", id);
-        return query.getSingleResult();
+        return em.find(Dentist.class, id);
     }
 
     @Override
@@ -40,4 +39,12 @@ public class DentistDAO implements AbstractDAO<Dentist> {
         em.remove(object);
     }
 
+    public void update(Dentist object) {
+        Dentist userToUpdate = get(object.getRegistration());
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        userToUpdate.setFirstname(object.getFirstName());
+        userToUpdate.setLastName(object.getLastName());
+        tx.commit();
+    }
 }

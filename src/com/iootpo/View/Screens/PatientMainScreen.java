@@ -1,28 +1,21 @@
 package com.iootpo.View.Screens;
 
 import javax.swing.*;
-import javax.swing.GroupLayout;
 
-public class AdminMainScreen extends JFrame {
+public class PatientMainScreen extends JFrame {
     private static JFrame frame;
 
-    private AdminMainScreen() {
-        managePatientsButton = new JButton();
-        manageDentistsButton = new JButton();
+    private PatientMainScreen() {
+        createAppointmentButton = new JButton();
 
-        setTitle("Administrar");
+        setTitle("Bienvenido/a!");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         GroupLayout layout = new GroupLayout(this.getContentPane());
         setLayout(layout);
 
-        managePatientsButton.setText("Administrar pacientes");
-        managePatientsButton.addActionListener(e -> {
-            PatientAdminActions.getWindow().setVisible(true);
-            frame.setVisible(false);
-        });
-        manageDentistsButton.setText("Administrar odontólogos");
-        manageDentistsButton.addActionListener(e -> {
+        createAppointmentButton.setText("Registrar nuevo turno");
+        createAppointmentButton.addActionListener(e -> {
             DentistAdminActions.getWindow().setVisible(true);
             frame.setVisible(false);
         });
@@ -32,17 +25,15 @@ public class AdminMainScreen extends JFrame {
                 .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(273, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                        .addComponent(manageDentistsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(managePatientsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(createAppointmentButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE))
                     .addGap(264, 264, 264))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup()
                 .addGroup(layout.createSequentialGroup()
                     .addGap(76, 76, 76)
-                    .addComponent(managePatientsButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(manageDentistsButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createAppointmentButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(86, Short.MAX_VALUE))
         );
         pack();
@@ -51,11 +42,10 @@ public class AdminMainScreen extends JFrame {
 
     public static JFrame getWindow() {
         if (frame == null) {
-            frame = new AdminMainScreen();
+            frame = new PatientMainScreen();
         }
         return frame;
     }
 
-    private JButton managePatientsButton;
-    private JButton manageDentistsButton;
+    private JButton createAppointmentButton;
 }
