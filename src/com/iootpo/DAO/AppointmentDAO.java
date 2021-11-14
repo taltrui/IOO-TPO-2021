@@ -7,14 +7,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class AppointmentDAO implements AbstractDAO<Appointment> {
+public class AppointmentDAO implements DAOInterface<Appointment> {
     private final EntityManager em = DBHandlerSingleton.getConnection().getEm();
 
     @Override
     public Appointment get(String id) {
-        TypedQuery<Appointment> query =
-                em.createQuery("SELECT appointment FROM Appointment appointment WHERE appointment.id like :id", Appointment.class).setParameter("id", id);
-        return query.getSingleResult();
+        return em.find(Appointment.class, id);
     }
 
     @Override

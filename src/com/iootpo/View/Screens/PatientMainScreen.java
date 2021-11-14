@@ -16,8 +16,7 @@ public class PatientMainScreen extends JFrame {
 
         createAppointmentButton.setText("Registrar nuevo turno");
         createAppointmentButton.addActionListener(e -> {
-            DentistAdminActions.getWindow().setVisible(true);
-            frame.setVisible(false);
+            new RegisterAppointment().setVisible(true);
         });
 
         layout.setHorizontalGroup(

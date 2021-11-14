@@ -8,7 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class DentistDAO implements AbstractDAO<Dentist> {
+public class DentistDAO implements DAOInterface<Dentist> {
     private final EntityManager em = DBHandlerSingleton.getConnection().getEm();
 
     @Override

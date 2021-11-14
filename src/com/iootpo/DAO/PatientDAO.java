@@ -8,7 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class PatientDAO implements AbstractDAO<Patient> {
+public class PatientDAO implements DAOInterface<Patient> {
     private final EntityManager em = DBHandlerSingleton.getConnection().getEm();
 
     @Override

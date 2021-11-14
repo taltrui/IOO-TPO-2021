@@ -2,7 +2,7 @@ package com.iootpo.DAO;
 
 import java.util.List;
 
-public interface AbstractDAO<T> {
+public interface DAOInterface<T> {
     T get(String id);
 
     List<T> getAll();
