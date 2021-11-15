@@ -2,7 +2,6 @@ package com.iootpo.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
 public class Appointment {
@@ -10,17 +9,15 @@ public class Appointment {
     String id;
     String patientId;
     String dentistId;
-    Date date;
+    String day;
+    String hour;
 
-    public Appointment(String patientId, String dentistId, Date date) {
+    public Appointment(String patientId, String dentistId, String day, String hour) {
         this.patientId = patientId;
         this.dentistId = dentistId;
-        this.date = date;
-        this.id = Math.random()+"";
-    }
-
-    public Appointment(Date date) {
-        this.date = date;
+        this.day = day;
+        this.hour = hour;
+        this.id = Math.random() + "";
     }
 
     public Appointment() {
@@ -35,7 +32,11 @@ public class Appointment {
         return dentistId;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDay() {
+        return day;
+    }
+
+    public String getHour() {
+        return hour;
     }
 }

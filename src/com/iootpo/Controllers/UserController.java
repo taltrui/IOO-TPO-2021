@@ -4,6 +4,7 @@ import com.iootpo.DAO.AdminDAO;
 import com.iootpo.DAO.PatientDAO;
 import com.iootpo.Model.Admin;
 import com.iootpo.Model.Patient;
+import com.iootpo.Model.User;
 import com.iootpo.View.Screens.AdminMainScreen;
 import com.iootpo.View.Screens.Login;
 import com.iootpo.View.Screens.PatientMainScreen;
@@ -13,6 +14,15 @@ import javax.swing.*;
 
 public class UserController {
 
+    private Patient currentPatient;
+    private static UserController controller;
+
+    public static UserController getController() {
+        if (controller == null) {
+            controller = new UserController();
+        }
+        return controller;
+    }
     public void logUser(String user, char[] password) {
 
         try {
@@ -36,6 +46,7 @@ public class UserController {
             if (patient != null && patient.getPassword().equals(new String(password))) {
                 PatientMainScreen.getWindow().setVisible(true);
                 Login.getWindow().setVisible(false);
+                currentPatient = patient;
                 return;
             }
         } catch (NoResultException exception) {
@@ -44,5 +55,9 @@ public class UserController {
         JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
 
 
+    }
+
+    public Patient getCurrentPatient() {
+        return currentPatient;
     }
 }

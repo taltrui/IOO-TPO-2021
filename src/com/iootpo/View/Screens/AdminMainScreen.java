@@ -9,6 +9,7 @@ public class AdminMainScreen extends JFrame {
     private AdminMainScreen() {
         managePatientsButton = new JButton();
         manageDentistsButton = new JButton();
+        queryAppointmentsButton = new JButton();
 
         setTitle("Administrar");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -26,6 +27,10 @@ public class AdminMainScreen extends JFrame {
             DentistAdminActions.getWindow().setVisible(true);
             frame.setVisible(false);
         });
+        queryAppointmentsButton.setText("Consultar turnos registrados");
+        queryAppointmentsButton.addActionListener(e -> {
+            new Appointments().setVisible(true);
+        });
 
         layout.setHorizontalGroup(
             layout.createParallelGroup()
@@ -33,7 +38,8 @@ public class AdminMainScreen extends JFrame {
                     .addContainerGap(273, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                         .addComponent(manageDentistsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(managePatientsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(managePatientsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(queryAppointmentsButton, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE))
                     .addGap(264, 264, 264))
         );
         layout.setVerticalGroup(
@@ -43,6 +49,8 @@ public class AdminMainScreen extends JFrame {
                     .addComponent(managePatientsButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(manageDentistsButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(queryAppointmentsButton, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(86, Short.MAX_VALUE))
         );
         pack();
@@ -58,4 +66,5 @@ public class AdminMainScreen extends JFrame {
 
     private JButton managePatientsButton;
     private JButton manageDentistsButton;
+    private JButton queryAppointmentsButton;
 }

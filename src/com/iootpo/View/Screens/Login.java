@@ -1,6 +1,7 @@
 package com.iootpo.View.Screens;
 
 import com.iootpo.Controllers.UserController;
+import com.iootpo.Model.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,9 +11,8 @@ public class Login extends JFrame {
 
     private void logUser(String user, char[] password) {
         if(user.isBlank() || password.length == 0) return;
-        UserController userController = new UserController();
 
-        userController.logUser(user, password);
+        UserController.getController().logUser(user, password);
     }
 
     private Login() {

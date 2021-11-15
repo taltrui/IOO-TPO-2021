@@ -628,3 +628,426 @@ Type com.iootpo.Model.Patient is not enhanced.
 [2021-11-14 17:13:07 #6 type] 
 Type com.iootpo.Model.Dentist is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 19:31:01 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 15276@DESKTOP-CK22ANI
+
+[2021-11-14 19:31:01 #2 store] 
+Configuration path: ?
+
+[2021-11-14 19:31:01 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 19:31:01 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 19:31:01 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 19:31:01 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 19:42:29 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 7008@DESKTOP-CK22ANI
+
+[2021-11-14 19:42:29 #2 store] 
+Configuration path: ?
+
+[2021-11-14 19:42:29 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 19:42:29 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 19:42:29 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 19:42:29 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 19:59:49 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 1304@DESKTOP-CK22ANI
+
+[2021-11-14 19:59:49 #2 store] 
+Configuration path: ?
+
+[2021-11-14 19:59:49 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 19:59:49 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 19:59:49 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 19:59:49 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:30:54 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 3536@DESKTOP-CK22ANI
+
+[2021-11-14 20:30:54 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:30:54 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:30:54 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:30:54 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:30:54 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:30:57 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:32:48 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 21-21)
+
+[2021-11-14 20:32:48 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 12880@DESKTOP-CK22ANI
+
+[2021-11-14 20:32:48 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:32:48 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:32:48 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:32:48 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:32:48 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:32:48 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:34:27 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 12136@DESKTOP-CK22ANI
+
+[2021-11-14 20:34:27 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:34:27 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:34:27 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:34:27 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:34:27 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:34:27 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:35:16 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 22-23)
+
+[2021-11-14 20:35:16 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 9484@DESKTOP-CK22ANI
+
+[2021-11-14 20:35:16 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:35:16 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:35:16 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:35:16 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:35:16 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:35:16 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:35:37 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 24-24)
+
+[2021-11-14 20:35:37 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 22592@DESKTOP-CK22ANI
+
+[2021-11-14 20:35:37 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:35:37 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:35:37 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:35:37 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:35:37 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:35:37 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:36:08 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 12592@DESKTOP-CK22ANI
+
+[2021-11-14 20:36:08 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:36:08 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:36:08 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:36:08 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:36:08 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:36:08 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:37:51 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 8568@DESKTOP-CK22ANI
+
+[2021-11-14 20:37:51 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:37:51 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:37:51 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:37:51 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:37:51 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:37:51 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:38:25 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 20868@DESKTOP-CK22ANI
+
+[2021-11-14 20:38:25 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:38:25 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:38:25 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:38:25 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:38:25 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:38:25 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:39:14 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 13792@DESKTOP-CK22ANI
+
+[2021-11-14 20:39:14 #2 store] 
+Configuration path: ?
+
+[2021-11-14 20:39:14 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:39:14 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:39:14 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:39:14 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:39:14 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:39:30 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 25-25)
+
+[2021-11-14 20:39:30 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 9084@DESKTOP-CK22ANI
+
+[2021-11-14 20:39:30 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:39:30 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:39:30 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:39:30 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:39:30 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:39:30 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:41:46 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 26-27)
+
+[2021-11-14 20:41:46 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 17280@DESKTOP-CK22ANI
+
+[2021-11-14 20:41:46 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:41:46 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:41:46 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:41:46 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:41:46 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:41:46 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 20:43:51 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' has been recovered (tr. 28-28)
+
+[2021-11-14 20:43:51 #2 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 15100@DESKTOP-CK22ANI
+
+[2021-11-14 20:43:51 #3 store] 
+Configuration path: ?
+
+[2021-11-14 20:43:51 #4 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 20:43:51 #5 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 20:43:51 #6 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 20:43:51 #7 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 20:43:51 #8 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 21:19:45 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 13200@DESKTOP-CK22ANI
+
+[2021-11-14 21:19:45 #2 store] 
+Configuration path: ?
+
+[2021-11-14 21:19:45 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 21:19:45 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 21:19:45 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 21:19:45 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 21:19:45 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 21:20:17 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 20468@DESKTOP-CK22ANI
+
+[2021-11-14 21:20:17 #2 store] 
+Configuration path: ?
+
+[2021-11-14 21:20:17 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 21:20:17 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 21:20:17 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 21:20:17 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 21:20:17 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-11-14 21:21:04 #1 store] 
+Database 'C:\Users\tomas\Workspace\IOO-TPO-2021\libs\db\p2.odb' is opened by 19192@DESKTOP-CK22ANI
+
+[2021-11-14 21:21:04 #2 store] 
+Configuration path: ?
+
+[2021-11-14 21:21:04 #3 type] 
+Type com.iootpo.Model.User is not enhanced.
+
+[2021-11-14 21:21:04 #4 type] 
+Type com.iootpo.Model.Admin is not enhanced.
+
+[2021-11-14 21:21:04 #5 type] 
+Type com.iootpo.Model.Patient is not enhanced.
+
+[2021-11-14 21:21:04 #6 type] 
+Type com.iootpo.Model.Dentist is not enhanced.
+
+[2021-11-14 21:21:04 #7 type] 
+Type com.iootpo.Model.Appointment is not enhanced.
+

@@ -18,7 +18,7 @@ public class AppointmentDAO implements DAOInterface<Appointment> {
     @Override
     public List<Appointment> getAll() {
         TypedQuery<Appointment> query =
-                em.createQuery("SELECT appointment FROM Dentist appointment", Appointment.class);
+                em.createQuery("SELECT appointment FROM Appointment appointment", Appointment.class);
         return query.getResultList();
 
     }
@@ -36,6 +36,18 @@ public class AppointmentDAO implements DAOInterface<Appointment> {
     @Override
     public void delete(Appointment object) {
         em.remove(object);
+        em.clear();
     }
 
+    public List<Appointment> getAllByDentistAndDay(String registration, String selectedDay) {
+        TypedQuery<Appointment> query =
+                em.createQuery("SELECT appointment FROM Appointment appointment WHERE appointment.dentistId like :id and appointment.day like :day", Appointment.class).setParameter("id", registration).setParameter("day", selectedDay);
+        return query.getResultList();
+    }
+
+    public List<Appointment> getAllByDentist(String registration) {
+        TypedQuery<Appointment> query =
+                em.createQuery("SELECT appointment FROM Appointment appointment WHERE appointment.dentistId like :id", Appointment.class).setParameter("id", registration);
+        return query.getResultList();
+    }
 }
