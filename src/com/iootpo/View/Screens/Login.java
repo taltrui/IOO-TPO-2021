@@ -26,11 +26,11 @@ public class Login extends JFrame {
         passwordFieldCaption = new JLabel();
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(700, 300);
-
+        setSize(500, 250);
         GroupLayout layout = new GroupLayout(this.getContentPane());
         setLayout(layout);
 
+        setLocationRelativeTo(null);
         userLabel.setText("Usuario");
 
         passwordLabel.setText("Contraseña");
