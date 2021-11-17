@@ -9,8 +9,6 @@ public class Admin extends User {
     @Id
     String userName;
 
-    boolean isAdmin = true;
-
     public Admin(String userName, String password) {
         this.userName = userName;
         this.password = password;
@@ -19,13 +17,4 @@ public class Admin extends User {
     public Admin() {
 
     }
-
-    public boolean isAdmin() {
-        return isAdmin;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
 }

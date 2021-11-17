@@ -4,12 +4,10 @@ package com.iootpo.View.Screens;
 import com.iootpo.Controllers.AppointmentController;
 import com.iootpo.Model.Dentist;
 
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.*;
+import java.util.Objects;
 
 public class Appointments extends JFrame {
 
@@ -20,13 +18,11 @@ public class Appointments extends JFrame {
 
         appointmentController.populateDentistCombo(dentistsCombo);
 
-        dentistsCombo.addActionListener(e -> {
-            appointmentController.populateTable((Dentist) dentistsCombo.getSelectedItem(), table);
-        });
+        dentistsCombo.addActionListener(e -> appointmentController.populateTable((Dentist) Objects.requireNonNull(dentistsCombo.getSelectedItem()), table));
 
 
         setBounds(150, 150, 756, 433);
-        contentPane = new JPanel();
+        JPanel contentPane = new JPanel();
         setContentPane(contentPane);
         GridBagLayout gbl_contentPane = new GridBagLayout();
         gbl_contentPane.columnWidths = new int[]{730, 0};
@@ -35,7 +31,7 @@ public class Appointments extends JFrame {
         gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
         contentPane.setLayout(gbl_contentPane);
 
-        dentistLabel = new JLabel("Seleccione odontólogo");
+        JLabel dentistLabel = new JLabel("Seleccione odontólogo");
         GridBagConstraints gbc_dentistLabel = new GridBagConstraints();
         gbc_dentistLabel.fill = GridBagConstraints.BOTH;
         gbc_dentistLabel.insets = new Insets(0, 0, 5, 0);
@@ -84,8 +80,6 @@ public class Appointments extends JFrame {
         setLocationRelativeTo(getOwner());
     }
 
-    private JPanel contentPane;
     private JTable table;
-    private JLabel dentistLabel;
     private final JComboBox<Dentist> dentistsCombo = new JComboBox<>();
 }

@@ -4,6 +4,7 @@ import com.iootpo.Controllers.PatientController;
 import com.iootpo.Model.Patient;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class ModifyPatient extends PatientData {
     PatientController patientController = new PatientController();
@@ -16,9 +17,7 @@ public class ModifyPatient extends PatientData {
 
         patientController.populateCombo(userCombo);
 
-        userCombo.addActionListener(e -> {
-            populateData((Patient)userCombo.getSelectedItem());
-        });
+        userCombo.addActionListener(e -> populateData((Patient) Objects.requireNonNull(userCombo.getSelectedItem())));
     }
 
     void populateData(Patient selectedPatient) {
@@ -36,7 +35,7 @@ public class ModifyPatient extends PatientData {
 
     @Override
     void onSubmit() {
-        if(!validInputs()) return;
+        if(invalidInputs()) return;
 
         try {
             patientController.update(createUser());

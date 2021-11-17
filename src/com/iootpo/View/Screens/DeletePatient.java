@@ -27,10 +27,10 @@ public class DeletePatient extends JFrame {
     }
 
     public DeletePatient() {
-        patientToDeleteCombo = new JComboBox();
-        comboLabel = new JLabel();
-        cancelButton = new JButton();
-        okButton = new JButton();
+        patientToDeleteCombo = new JComboBox<>();
+        JLabel comboLabel = new JLabel();
+        JButton cancelButton = new JButton();
+        JButton okButton = new JButton();
 
         setTitle("Eliminar paciente");
         GroupLayout layout = new GroupLayout(this.getContentPane());
@@ -38,20 +38,14 @@ public class DeletePatient extends JFrame {
 
         patientController.populateCombo(patientToDeleteCombo);
 
-        patientToDeleteCombo.addActionListener(e -> {
-            selectedPatient = ((Patient) patientToDeleteCombo.getSelectedItem());
-        });
+        patientToDeleteCombo.addActionListener(e -> selectedPatient = ((Patient) patientToDeleteCombo.getSelectedItem()));
         comboLabel.setText("Seleccione el paciente a eliminar:");
 
         cancelButton.setText("Cancelar");
-        cancelButton.addActionListener(e -> {
-            setVisible(false);
-        });
+        cancelButton.addActionListener(e -> setVisible(false));
 
         okButton.setText("Eliminar");
-        okButton.addActionListener(e -> {
-            onSubmit();
-        });
+        okButton.addActionListener(e -> onSubmit());
 
         layout.setHorizontalGroup(
                 layout.createParallelGroup()
@@ -86,9 +80,6 @@ public class DeletePatient extends JFrame {
         setLocationRelativeTo(getOwner());
     }
 
-    private JComboBox patientToDeleteCombo;
-    private JLabel comboLabel;
-    private JButton cancelButton;
-    private JButton okButton;
+    private final JComboBox<Patient> patientToDeleteCombo;
 
 }

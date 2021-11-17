@@ -30,11 +30,6 @@ public class DentistDAO implements DAOInterface<Dentist> {
     }
 
     @Override
-    public void createMultiple(List<Dentist> objects) {
-        objects.forEach(this::create);
-    }
-
-    @Override
     public void delete(Dentist object) {
         em.remove(object);
     }

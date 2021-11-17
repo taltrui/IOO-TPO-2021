@@ -14,7 +14,7 @@ public class PatientData extends JFrame {
     void onSubmit() {
     }
 
-    boolean validInputs() {
+    boolean invalidInputs() {
         final boolean[] valid = {true};
 
         fields.forEach(field -> {
@@ -24,37 +24,36 @@ public class PatientData extends JFrame {
             }
         });
 
-        return valid[0];
+        return !valid[0];
     }
 
     Patient createUser() {
-        Patient newPatient = new Patient(userField.getText(), dniField.getText(), nameField.getText(), lastnameField.getText(), addressField.getText(), passwordField.getText());
 
-        return newPatient;
+        return new Patient(userField.getText(), dniField.getText(), nameField.getText(), lastnameField.getText(), addressField.getText(), passwordField.getText());
     }
 
     public PatientData() {
-        nameLabel = new JLabel();
+        JLabel nameLabel = new JLabel();
         nameField = new JTextField();
-        nameFieldCaption = new JLabel();
-        dniFieldCaption = new JLabel();
+        JLabel nameFieldCaption = new JLabel();
+        JLabel dniFieldCaption = new JLabel();
         dniField = new JTextField();
-        dniLabel = new JLabel();
-        lastnameFieldCaption = new JLabel();
+        JLabel dniLabel = new JLabel();
+        JLabel lastnameFieldCaption = new JLabel();
         lastnameField = new JTextField();
-        lastnameLabel = new JLabel();
-        addressFieldCaption = new JLabel();
+        JLabel lastnameLabel = new JLabel();
+        JLabel addressFieldCaption = new JLabel();
         addressField = new JTextField();
-        addressLabel = new JLabel();
-        userFieldCaption = new JLabel();
+        JLabel addressLabel = new JLabel();
+        JLabel userFieldCaption = new JLabel();
         userField = new JTextField();
-        userLabel = new JLabel();
-        passwordFieldCaption = new JLabel();
+        JLabel userLabel = new JLabel();
+        JLabel passwordFieldCaption = new JLabel();
         passwordField = new JTextField();
-        passwordLabel = new JLabel();
+        JLabel passwordLabel = new JLabel();
         okButton = new JButton();
-        cancelButton = new JButton();
-        userCombo = new JComboBox();
+        JButton cancelButton = new JButton();
+        userCombo = new JComboBox<>();
 
         fields = Arrays.stream(new Field[]{new Field(nameField, nameFieldCaption),
                 new Field(lastnameField, lastnameFieldCaption), new Field(dniField, dniFieldCaption),
@@ -206,27 +205,14 @@ public class PatientData extends JFrame {
         setLocationRelativeTo(getOwner());
     }
 
-    private JLabel nameLabel;
     JTextField nameField;
-    private JLabel nameFieldCaption;
-    private JLabel dniFieldCaption;
     JTextField dniField;
-    private JLabel dniLabel;
-    private JLabel lastnameFieldCaption;
     JTextField lastnameField;
-    private JLabel lastnameLabel;
-    private JLabel addressFieldCaption;
     JTextField addressField;
-    private JLabel addressLabel;
-    private JLabel userFieldCaption;
     JTextField userField;
-    private JLabel userLabel;
-    private JLabel passwordFieldCaption;
     JTextField passwordField;
-    private JLabel passwordLabel;
     JButton okButton;
-    private JButton cancelButton;
-    JComboBox userCombo;
+    JComboBox<Patient> userCombo;
     List<Field> fields;
 
 }

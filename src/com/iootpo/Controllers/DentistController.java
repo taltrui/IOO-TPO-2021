@@ -2,7 +2,6 @@ package com.iootpo.Controllers;
 
 import com.iootpo.DAO.DentistDAO;
 import com.iootpo.Model.Dentist;
-import com.iootpo.Model.Patient;
 
 import javax.swing.*;
 import java.util.List;
@@ -14,11 +13,11 @@ public class DentistController {
         dentistDAO.update(dentist);
     }
 
-    public void populateCombo(JComboBox dentistCombo) {
+    public void populateCombo(JComboBox<Dentist> dentistCombo) {
         List<Dentist> dentists = dentistDAO.getAll();
 
-        dentistCombo.addItem(new Patient());
-        dentists.forEach(user -> dentistCombo.addItem(user));
+        dentistCombo.addItem(new Dentist());
+        dentists.forEach(dentistCombo::addItem);
     }
 
     public void create(Dentist newDentist) {

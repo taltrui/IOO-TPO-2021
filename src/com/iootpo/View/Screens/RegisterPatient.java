@@ -17,7 +17,7 @@ public class RegisterPatient extends PatientData {
 
     @Override
     void onSubmit() {
-        if(!validInputs()) return;
+        if(invalidInputs()) return;
 
         PatientController patientController = new PatientController();
 

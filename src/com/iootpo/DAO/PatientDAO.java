@@ -30,11 +30,6 @@ public class PatientDAO implements DAOInterface<Patient> {
     }
 
     @Override
-    public void createMultiple(List<Patient> objects) {
-        objects.forEach(this::create);
-    }
-
-    @Override
     public void delete(Patient object) {
         DBHandlerSingleton.delete(object);
     }

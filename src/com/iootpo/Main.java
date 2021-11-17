@@ -12,7 +12,7 @@ public class Main {
 //
 //        AdminDAO adminDAO = new AdminDAO();
 //        adminDAO.create(admin);
-////
+
         Login.getWindow().setVisible(true);
     }
 }

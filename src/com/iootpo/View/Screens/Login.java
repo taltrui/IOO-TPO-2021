@@ -1,10 +1,10 @@
 package com.iootpo.View.Screens;
 
 import com.iootpo.Controllers.UserController;
-import com.iootpo.Model.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
 
 public class Login extends JFrame {
     private static JFrame frame;
@@ -16,12 +16,12 @@ public class Login extends JFrame {
     }
 
     private Login() {
-        userLabel = new JLabel();
-        passwordLabel = new JLabel();
+        JLabel userLabel = new JLabel();
+        JLabel passwordLabel = new JLabel();
         userField = new JTextField();
         passwordField = new JPasswordField();
-        showPasswordCheck = new JCheckBox();
-        loginButton = new JButton();
+        JCheckBox showPasswordCheck = new JCheckBox();
+        JButton loginButton = new JButton();
         userFieldCaption = new JLabel();
         passwordFieldCaption = new JLabel();
 
@@ -37,7 +37,7 @@ public class Login extends JFrame {
 
         showPasswordCheck.setText("Mostrar contraseña");
         showPasswordCheck.addItemListener(l -> {
-                if (l.getStateChange() == 1) {
+                if (l.getStateChange() == ItemEvent.SELECTED) {
                     passwordField.setEchoChar((char) 0);
                 } else {
                     passwordField.setEchoChar('•');
@@ -111,12 +111,8 @@ public class Login extends JFrame {
         return frame;
     }
 
-    private JLabel userLabel;
-    private JLabel passwordLabel;
-    private JTextField userField;
-    private JPasswordField passwordField;
-    private JCheckBox showPasswordCheck;
-    private JButton loginButton;
-    private JLabel userFieldCaption;
-    private JLabel passwordFieldCaption;
+    private final JTextField userField;
+    private final JPasswordField passwordField;
+    private final JLabel userFieldCaption;
+    private final JLabel passwordFieldCaption;
 }

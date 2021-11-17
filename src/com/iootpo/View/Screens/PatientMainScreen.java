@@ -6,7 +6,7 @@ public class PatientMainScreen extends JFrame {
     private static JFrame frame;
 
     private PatientMainScreen() {
-        createAppointmentButton = new JButton();
+        JButton createAppointmentButton = new JButton();
 
         setTitle("Bienvenido/a!");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -15,9 +15,7 @@ public class PatientMainScreen extends JFrame {
         setLayout(layout);
 
         createAppointmentButton.setText("Registrar nuevo turno");
-        createAppointmentButton.addActionListener(e -> {
-            new RegisterAppointment().setVisible(true);
-        });
+        createAppointmentButton.addActionListener(e -> new RegisterAppointment().setVisible(true));
 
         layout.setHorizontalGroup(
             layout.createParallelGroup()
@@ -46,5 +44,4 @@ public class PatientMainScreen extends JFrame {
         return frame;
     }
 
-    private JButton createAppointmentButton;
 }

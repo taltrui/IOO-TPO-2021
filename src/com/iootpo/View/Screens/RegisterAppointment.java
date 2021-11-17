@@ -29,16 +29,16 @@ public class RegisterAppointment extends JFrame {
     }
 
     public RegisterAppointment() {
-        dentistCombo = new JComboBox();
-        dayCombo = new JComboBox();
-        hourCombo = new JComboBox();
+        dentistCombo = new JComboBox<>();
+        dayCombo = new JComboBox<>();
+        hourCombo = new JComboBox<>();
 
-        dentistComboLabel = new JLabel();
-        dayComboLabel = new JLabel();
-        hourComboLabel = new JLabel();
+        JLabel dentistComboLabel = new JLabel();
+        JLabel dayComboLabel = new JLabel();
+        JLabel hourComboLabel = new JLabel();
 
-        cancelButton = new JButton();
-        okButton = new JButton();
+        JButton cancelButton = new JButton();
+        JButton okButton = new JButton();
 
         setTitle("Nuevo turno");
         GroupLayout layout = new GroupLayout(this.getContentPane());
@@ -58,23 +58,17 @@ public class RegisterAppointment extends JFrame {
         });
 
         hourCombo.setVisible(true);
-        hourCombo.addActionListener(e -> {
-            selectedHour = (String) hourCombo.getSelectedItem();
-        });
+        hourCombo.addActionListener(e -> selectedHour = (String) hourCombo.getSelectedItem());
 
         dentistComboLabel.setText("Seleccione el odontólogo:");
         dayComboLabel.setText("Seleccione el día:");
         hourComboLabel.setText("Seleccione el horario:");
 
         cancelButton.setText("Cancelar");
-        cancelButton.addActionListener(e -> {
-            setVisible(false);
-        });
+        cancelButton.addActionListener(e -> setVisible(false));
 
         okButton.setText("Registrar");
-        okButton.addActionListener(e -> {
-            onSubmit();
-        });
+        okButton.addActionListener(e -> onSubmit());
 
         layout.setHorizontalGroup(
                 layout.createParallelGroup(Alignment.TRAILING)
@@ -119,13 +113,8 @@ public class RegisterAppointment extends JFrame {
         setLocationRelativeTo(getOwner());
     }
 
-    private JComboBox dentistCombo;
-    private JComboBox dayCombo;
-    private JComboBox hourCombo;
-    private JLabel dentistComboLabel;
-    private JLabel dayComboLabel;
-    private JLabel hourComboLabel;
-    private JButton cancelButton;
-    private JButton okButton;
+    private final JComboBox<Dentist> dentistCombo;
+    private final JComboBox<String> dayCombo;
+    private final JComboBox<String> hourCombo;
 
 }

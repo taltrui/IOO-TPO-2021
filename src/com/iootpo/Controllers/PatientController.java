@@ -13,11 +13,11 @@ public class PatientController {
         patientDao.delete(selectedPatient);
     }
 
-    public void populateCombo(JComboBox patientToDeleteCombo) {
+    public void populateCombo(JComboBox<Patient> patientToDeleteCombo) {
         List<Patient> patients = patientDao.getAll();
 
         patientToDeleteCombo.addItem(new Patient());
-        patients.forEach(user -> patientToDeleteCombo.addItem(user));
+        patients.forEach(patientToDeleteCombo::addItem);
     }
 
     public void create(Patient user) {

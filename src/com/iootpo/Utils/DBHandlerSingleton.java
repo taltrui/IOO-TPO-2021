@@ -8,10 +8,9 @@ import javax.persistence.Persistence;
 public class DBHandlerSingleton {
     private static DBHandlerSingleton dbConnection;
     private static EntityManager em = null;
-    private static EntityManagerFactory emf = null;
 
     private DBHandlerSingleton() {
-        emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("$objectdb/db/p2.odb");
         em = emf.createEntityManager();
     }
 
@@ -26,10 +25,6 @@ public class DBHandlerSingleton {
         return em;
     }
 
-    public EntityManagerFactory getEmf() {
-        return emf;
-    }
-
     public static void persist(Object object) {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
@@ -42,10 +37,5 @@ public class DBHandlerSingleton {
         tx.begin();
         em.remove(object);
         tx.commit();
-    }
-
-    public static void close() {
-        em.close();
-        emf.close();
     }
 }

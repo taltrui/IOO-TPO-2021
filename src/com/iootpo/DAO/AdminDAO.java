@@ -29,11 +29,6 @@ public class AdminDAO implements DAOInterface<Admin> {
     }
 
     @Override
-    public void createMultiple(List<Admin> objects) {
-        objects.forEach(this::create);
-    }
-
-    @Override
     public void delete(Admin object) {
         em.remove(object);
     }

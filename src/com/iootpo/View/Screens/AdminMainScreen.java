@@ -7,9 +7,9 @@ public class AdminMainScreen extends JFrame {
     private static JFrame frame;
 
     private AdminMainScreen() {
-        managePatientsButton = new JButton();
-        manageDentistsButton = new JButton();
-        queryAppointmentsButton = new JButton();
+        JButton managePatientsButton = new JButton();
+        JButton manageDentistsButton = new JButton();
+        JButton queryAppointmentsButton = new JButton();
 
         setTitle("Administrar");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -28,9 +28,7 @@ public class AdminMainScreen extends JFrame {
             frame.setVisible(false);
         });
         queryAppointmentsButton.setText("Consultar turnos registrados");
-        queryAppointmentsButton.addActionListener(e -> {
-            new Appointments().setVisible(true);
-        });
+        queryAppointmentsButton.addActionListener(e -> new Appointments().setVisible(true));
 
         layout.setHorizontalGroup(
             layout.createParallelGroup()
@@ -64,7 +62,4 @@ public class AdminMainScreen extends JFrame {
         return frame;
     }
 
-    private JButton managePatientsButton;
-    private JButton manageDentistsButton;
-    private JButton queryAppointmentsButton;
 }

@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class AppointmentController {
 
@@ -44,9 +45,9 @@ public class AppointmentController {
         days.forEach(dayCombo::addItem);
     }
 
-    public void populateHourCombo(JComboBox hourCombo, Dentist selectedDentist, String selectedDay) {
+    public void populateHourCombo(JComboBox<String> hourCombo, Dentist selectedDentist, String selectedDay) {
 
-        if (selectedDay == "") {
+        if (Objects.equals(selectedDay, "")) {
             hourCombo.removeAllItems();
             return;
         }
@@ -70,6 +71,7 @@ public class AppointmentController {
                 {"9:00", null, null, null, null, null},
                 {"9:30", null, null, null, null, null},
                 {"10:00", null, null, null, null, null},
+                {"10:30", null, null, null, null, null},
                 {"11:00", null, null, null, null, null},
                 {"11:30", null, null, null, null, null},
                 {"12:00", null, null, null, null, null},
@@ -84,8 +86,8 @@ public class AppointmentController {
 
         for(Appointment appointment : appointmentsByDentist) {
             int indexOfDay = days.indexOf(appointment.getDay()) + 1;
-            int indexOfHour = hours.indexOf((appointment.getHour())) - 1;
-
+            int indexOfHour = Math.max(hours.indexOf((appointment.getHour())), 0);
+            System.out.println(appointment.getHour());
             Patient patient = new PatientDAO().get(appointment.getPatient());
             appointments[indexOfHour][indexOfDay] =  patient.getFirstName() + " " + patient.getLastName();
         }

@@ -4,6 +4,7 @@ import com.iootpo.Controllers.DentistController;
 import com.iootpo.Model.Dentist;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class ModifyDentist extends DentistData {
     DentistController dentistController = new DentistController();
@@ -16,9 +17,7 @@ public class ModifyDentist extends DentistData {
 
         dentistController.populateCombo(dentistCombo);
 
-        dentistCombo.addActionListener(e -> {
-            populateData((Dentist)dentistCombo.getSelectedItem());
-        });
+        dentistCombo.addActionListener(e -> populateData((Dentist) Objects.requireNonNull(dentistCombo.getSelectedItem())));
     }
 
     void populateData(Dentist selectedDentist) {
@@ -33,14 +32,13 @@ public class ModifyDentist extends DentistData {
     @Override
     void onSubmit() {
 
-        if(!validInputs()) return;
+        if(invalidInputs()) return;
 
         try {
             dentistController.update(createDentist());
             JOptionPane.showMessageDialog(null, "Odontólogo modificado!");
             this.setVisible(false);
         } catch (Exception exception) {
-            System.out.println(exception);
             JOptionPane.showMessageDialog(null, "Hubo un error al modificar al odontólogo");
         }
     }

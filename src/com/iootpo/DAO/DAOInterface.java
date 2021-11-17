@@ -9,7 +9,5 @@ public interface DAOInterface<T> {
 
     void create(T object);
 
-    void createMultiple(List<T> objects);
-
     void delete(T object);
 }

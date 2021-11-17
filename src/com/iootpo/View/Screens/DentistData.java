@@ -15,7 +15,7 @@ public class DentistData extends JFrame {
     void onSubmit() {
     }
 
-    boolean validInputs() {
+    boolean invalidInputs() {
         final boolean[] valid = {true};
 
         fields.forEach(field -> {
@@ -25,28 +25,27 @@ public class DentistData extends JFrame {
             }
         });
 
-        return valid[0];
+        return !valid[0];
     }
 
     Dentist createDentist() {
-        Dentist newDentist = new Dentist(nameField.getText(), lastnameField.getText(), registrationField.getText());
 
-        return newDentist;
+        return new Dentist(nameField.getText(), lastnameField.getText(), registrationField.getText());
     }
 
     public DentistData() {
-        nameLabel = new JLabel();
+        JLabel nameLabel = new JLabel();
         nameField = new JTextField();
-        nameFieldCaption = new JLabel();
-        lastnameFieldCaption = new JLabel();
+        JLabel nameFieldCaption = new JLabel();
+        JLabel lastnameFieldCaption = new JLabel();
         lastnameField = new JTextField();
-        lastnameLabel = new JLabel();
-        registrationFieldCaption = new JLabel();
+        JLabel lastnameLabel = new JLabel();
+        JLabel registrationFieldCaption = new JLabel();
         registrationField = new JTextField();
-        registrationLabel = new JLabel();
+        JLabel registrationLabel = new JLabel();
         okButton = new JButton();
-        cancelButton = new JButton();
-        dentistCombo = new JComboBox();
+        JButton cancelButton = new JButton();
+        dentistCombo = new JComboBox<>();
 
         fields = Arrays.stream(new Field[]{new Field(nameField, nameFieldCaption),
                 new Field(lastnameField, lastnameFieldCaption), new Field(registrationField, registrationFieldCaption)
@@ -146,17 +145,10 @@ public class DentistData extends JFrame {
         setLocationRelativeTo(getOwner());
     }
 
-    private JLabel nameLabel;
     public JTextField nameField;
-    private JLabel nameFieldCaption;
-    private JLabel lastnameFieldCaption;
     public JTextField lastnameField;
-    private JLabel lastnameLabel;
-    private JLabel registrationFieldCaption;
     public JTextField registrationField;
-    private JLabel registrationLabel;
     JButton okButton;
-    private JButton cancelButton;
-    JComboBox dentistCombo;
+    JComboBox<Dentist> dentistCombo;
     List<Field> fields;
 }

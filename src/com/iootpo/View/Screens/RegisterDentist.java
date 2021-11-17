@@ -1,7 +1,6 @@
 package com.iootpo.View.Screens;
 
 import com.iootpo.Controllers.DentistController;
-import com.iootpo.DAO.DentistDAO;
 import com.iootpo.Model.Dentist;
 
 import javax.persistence.EntityExistsException;
@@ -18,7 +17,7 @@ public class RegisterDentist extends DentistData {
 
     @Override
     void onSubmit() {
-        if(!validInputs()) return;
+        if(invalidInputs()) return;
 
         DentistController dentistController = new DentistController();
 

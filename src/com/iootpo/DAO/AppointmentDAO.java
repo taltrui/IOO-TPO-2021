@@ -29,11 +29,6 @@ public class AppointmentDAO implements DAOInterface<Appointment> {
     }
 
     @Override
-    public void createMultiple(List<Appointment> objects) {
-        objects.forEach(this::create);
-    }
-
-    @Override
     public void delete(Appointment object) {
         em.remove(object);
         em.clear();
